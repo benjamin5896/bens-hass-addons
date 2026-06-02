@@ -1,0 +1,2 @@
+#!/command/with-contenv sh
+exec s6-setuidgid ola /usr/bin/olad --config-dir /etc/ola -f
