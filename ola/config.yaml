@@ -1,5 +1,5 @@
 name: "OLA – Open Lighting Architecture"
-description: "DMX lighting control via Open Lighting Architecture."
+description: "DMX lighting control via Open Lighting Architecture"
 version: "1.0.0"
 slug: "ola"
 init: false
