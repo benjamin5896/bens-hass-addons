@@ -1,0 +1,3 @@
+#!/command/with-contenv sh
+chown -R ola:ola /config
+exec s6-setuidgid ola /usr/bin/olad --config-dir /config -f
