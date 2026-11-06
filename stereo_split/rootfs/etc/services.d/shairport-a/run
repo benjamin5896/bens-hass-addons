@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bashio
+until avahi-daemon -c; do sleep 1; done
+for _ in $(seq 1 60); do
+    grep -q ':2328 ' /proc/net/udp 2>/dev/null && break
+    sleep 0.5
+done
+exec shairport-sync -c /run/stereosplit/shairport-a.conf

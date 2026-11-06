@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bashio
+exec python3 /usr/local/bin/mixer.py \
+    --fifo-a /run/stereosplit/roomA.pcm \
+    --fifo-b /run/stereosplit/roomB.pcm \
+    --out-fifo /run/stereosplit/mix.pcm

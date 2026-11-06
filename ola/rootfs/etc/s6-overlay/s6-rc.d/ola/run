@@ -1,0 +1,14 @@
+#!/command/with-contenv sh
+
+for plugin in dummy e131 espnet ftdidmx gpio karate kinet milinst opendmx \
+              openpixelcontrol osc pathport renard sandnet shownet spi \
+              stageprofi uartdmx usbserial; do
+  conf="/config/ola-${plugin}.conf"
+  [ -e "$conf" ] || echo "enabled = false" > "$conf"
+done
+
+chown -R ola:ola /config
+
+exec s6-setuidgid ola /usr/bin/olad \
+  --config-dir /config \
+  --no-register-with-dns-sd

@@ -1,0 +1,20 @@
+name: Stereo Split AirPlay
+description: Two AirPlay 2 receivers mixed into one left/right stereo stream, sent to a Denon AVR over AirPlay
+version: "1.0.0"
+slug: stereo_split
+arch:
+  - aarch64
+startup: application
+boot: auto
+init: false
+host_network: true
+privileged:
+  - SYS_NICE
+options:
+  left_channel_name: "Room A"
+  right_channel_name: "Room B"
+  denon_host: ""
+schema:
+  left_channel_name: str
+  right_channel_name: str
+  denon_host: str
