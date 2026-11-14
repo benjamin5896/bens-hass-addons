@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bashio
+exec /opt/venv/bin/python /usr/local/bin/airplay_sender.py \
+    --host "$(bashio::config 'denon_host')" \
+    --fifo /run/stereosplit/mix.pcm

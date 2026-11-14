@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv bashio
+rm -f /run/dbus/pid /run/dbus/system_bus_socket
+exec dbus-daemon --system --nofork --nopidfile
